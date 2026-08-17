@@ -92,6 +92,8 @@
   @media(max-width:760px){.about-grid{grid-template-columns:1fr}}
   .about p{color:var(--muted);font-size:16.5px;margin:0 0 18px}
   .about strong{color:var(--text);font-weight:600}
+
+  .about-photo{width:100%;max-width:280px;height:auto;border-radius:14px;border:1px solid var(--line);display:block;margin:0 0 18px;box-shadow:0 30px 70px -45px rgba(0,0,0,.8)}
   .quick{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;align-self:start}
   .quick h3{font-size:13px;font-family:"IBM Plex Mono",monospace;color:var(--amber);margin-bottom:14px;font-weight:500}
   .quick ul{list-style:none;margin:0;padding:0}
@@ -241,7 +243,9 @@
         <p>Before Sprout I spent three years at <strong>AppsFlyer</strong> as a DevOps Engineer, building GitHub Actions CI/CD, provisioning AWS with Terraform, and standing up centralized EFK logging that gave the team structured runbooks and faster incident triage. That's where I learned observability and incident response properly.</p>
         <p>The last stretch has changed how I work. I run <strong>Claude Code as an agent</strong> in my repos daily — with custom skills and CLAUDE.md/AGENTS.md context engineering — and I wire <strong>MCP servers split by blast radius</strong>: read-only for triage, mutating changes gated behind plan review and approval. The interesting problem now isn't whether AI can do infra work; it's building the guardrails so it does it safely. That's a platform problem — and platform problems are what I like.</p>
       </div>
-      <aside class="quick">
+      <aside>
+        <img src="tatina.jpg" alt="Tatina Bakishova" class="about-photo">
+        <div class="quick">
         <h3>// quick_facts</h3>
         <ul>
           <li><span>role</span><span>Platform Engineer</span></li>
@@ -252,6 +256,7 @@
           <li><span>certs</span><span>CKA · CKAD · AWS · TF</span></li>
           <li><span>focus</span><span>Fintech &amp; infra</span></li>
         </ul>
+        </div>
       </aside>
     </div>
   </div>
