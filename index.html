@@ -58,6 +58,14 @@
   .btn.primary{background:var(--amber);color:var(--ink);border-color:var(--amber)}
   .btn.ghost:hover{border-color:var(--amber);color:var(--amber)}
 
+
+  .hero-inner{display:grid;grid-template-columns:1.35fr .9fr;gap:48px;align-items:center}
+  .hero-photo{position:relative;justify-self:end}
+  .hero-photo img{width:100%;max-width:340px;height:auto;border-radius:18px;border:1px solid var(--line);display:block;filter:saturate(1.02) contrast(1.02);box-shadow:0 40px 90px -50px rgba(0,0,0,.9)}
+  .hero-photo::before{content:"";position:absolute;inset:-14px -14px auto auto;width:120px;height:120px;border-top:2px solid var(--amber);border-right:2px solid var(--amber);border-radius:0 18px 0 0;opacity:.6}
+  .hero-photo .photo-tag{position:absolute;left:14px;bottom:14px;background:rgba(11,16,32,.82);backdrop-filter:blur(6px);border:1px solid var(--line);color:var(--amber);font-size:12px;padding:6px 10px;border-radius:8px}
+  @media(max-width:820px){.hero-inner{grid-template-columns:1fr;gap:34px}.hero-photo{justify-self:start;order:-1}.hero-photo img{max-width:260px}}
+
   /* stat band */
   .stats{position:relative;z-index:1;background:var(--ink-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:80px}
   .stats-inner{display:grid;grid-template-columns:repeat(4,1fr)}
@@ -152,14 +160,20 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="wrap">
-    <div class="kicker mono">Platform Engineer — <b>Chicago, IL</b></div>
-    <h1>I build the platform other engineers <span class="hl">ship on.</span></h1>
-    <p class="lead">I own and operate the production EKS platform at Sprout Social — Terraform, GitOps, and observability — and I work AI-first, with the guardrails to do it safely against production.</p>
-    <div class="cta-row">
-      <a href="mailto:tatina.btech@gmail.com" class="btn primary">Email me</a>
-      <a href="https://www.linkedin.com/in/tatinabak/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
-      <a href="#work" class="btn ghost">Selected work</a>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="kicker mono">Platform Engineer — <b>Chicago, IL</b></div>
+      <h1>I build the platform other engineers <span class="hl">ship on.</span></h1>
+      <p class="lead">I own and operate the production EKS platform at Sprout Social — Terraform, GitOps, and observability — and I work AI-first, with the guardrails to do it safely against production.</p>
+      <div class="cta-row">
+        <a href="mailto:tatina.btech@gmail.com" class="btn primary">Email me</a>
+        <a href="https://www.linkedin.com/in/tatinabak/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
+        <a href="#work" class="btn ghost">Selected work</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="tatina.jpg" alt="Tatina Bakishova" width="760" height="947">
+      <span class="photo-tag mono">tatina@platform</span>
     </div>
   </div>
 </div>
