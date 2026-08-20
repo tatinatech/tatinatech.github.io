@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tatina Bakishova — Platform Engineer</title>
-<meta name="description" content="Platform Engineer in Chicago. I build and run the EKS platforms other engineers ship on — Terraform, GitOps, observability, and agentic AI workflows with the guardrails to run them safely against production.">
+<meta name="description" content="Platform Engineer in Chicago. Kubernetes, Terraform, and AWS — and practical AI tools for troubleshooting.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -164,8 +164,8 @@
 <div class="hero">
   <div class="wrap">
     <div class="kicker mono">Platform Engineer — <b>Chicago, IL</b></div>
-    <h1>I keep the Kubernetes platform <span class="hl">running</span> so other teams can ship.</h1>
-    <p class="lead">I run the production EKS platform at Sprout Social — Terraform, ArgoCD, and Prometheus — and I write practical AI-assisted tooling to help engineers debug Kubernetes faster.</p>
+    <h1>Platform Engineer. Mostly <span class="hl">Kubernetes</span>, Terraform, and AWS.</h1>
+    <p class="lead">I keep EKS platforms running at Sprout Social. Lately I've been building small AI tools to make Kubernetes troubleshooting less manual.</p>
     <div class="cta-row">
       <a href="mailto:tatina.btech@gmail.com" class="btn primary">Email me</a>
       <a href="https://www.linkedin.com/in/tatinabak/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
@@ -180,15 +180,14 @@
   <div class="wrap">
     <div class="eyebrow mono">selected_work</div>
     <h2 class="title">Selected work.</h2>
-    <p style="color:var(--muted);max-width:60ch;margin:0 0 26px">Three from the platform team at Sprout Social — the platform itself, its security model, and the AI tooling I run on top of it.</p>
+    <p style="color:var(--muted);max-width:60ch;margin:0 0 26px">A few things I've worked on.</p>
 
     <div class="case">
       <div class="num">01</div>
       <div>
         <h3>AI-assisted Kubernetes diagnostics</h3>
         <div class="ctx mono">Sprout Social · production EKS · advisory workflow</div>
-        <p>Every incident used to start with 20–30 minutes of the same manual work — checking pod status, describing resources, hunting for the right logs, reading through Kubernetes events before anyone could even start on root cause.</p>
-        <p>I built an <b>AI-assisted diagnostic workflow</b> that automates that first pass: it analyzes pod health, cluster events, and centralized logs, then generates a triage summary. Initial triage dropped from <b>20–30 minutes to 5–10</b>, and it shortcuts root-cause on <b>~60–70% of recurring issues</b> — CrashLoopBackOff, failed deploys, application errors.</p>
+        <p>A Claude Code skill that pulls pod status, events, and logs for a failing workload and suggests where to look first. Read-only — it doesn't touch the cluster.</p>
         <div class="stack"><span class="chip">Claude Code</span><span class="chip">MCP</span><span class="chip">EFK</span><span class="chip">Kubernetes</span></div>
       </div>
     </div>
@@ -198,8 +197,7 @@
       <div>
         <h3>An EKS platform with least-privilege by default</h3>
         <div class="ctx mono">Sprout Social · 8–10 teams · 100+ workloads</div>
-        <p>I own and operate the production EKS platform that <b>8–10 engineering teams</b> run <b>100+ workloads</b> on — clusters, autoscaling node groups, networking, and IAM, all provisioned with <b>Terraform</b>.</p>
-        <p>Security is built into the platform, not bolted on. Instead of node-wide IAM roles or AWS credentials stored as secrets, each workload binds to its own <b>IRSA role</b> scoped to least privilege and enforced with RBAC. If one workload is compromised, the attacker doesn't inherit the node's or another workload's permissions — <b>the blast radius stays contained</b>.</p>
+        <p>The production EKS platform, provisioned with Terraform, that multiple teams run 100+ workloads on. Each workload gets its own IAM role via IRSA, so a compromised pod can't reach another's AWS access.</p>
         <div class="stack"><span class="chip">Terraform</span><span class="chip">Amazon EKS</span><span class="chip">IRSA</span><span class="chip">Kubernetes RBAC</span></div>
       </div>
     </div>
@@ -209,8 +207,7 @@
       <div>
         <h3>GitOps delivery + centralized observability</h3>
         <div class="ctx mono">Sprout Social · platform delivery &amp; reliability</div>
-        <p>I moved delivery to <b>GitOps with ArgoCD</b> and version-controlled manifests, so every change is a reviewable commit and rollbacks that used to take 15–20 minutes now complete in <b>under 5</b>.</p>
-        <p>For reliability, I redesigned the <b>Prometheus and Alertmanager</b> rules around <b>SLO-based alerting</b> — cutting false-positive noise significantly so the alerts that page someone are the ones that actually matter, visualized in <b>Grafana</b>.</p>
+        <p>Moved deployments from manual Helm to GitOps with ArgoCD — every change is a Git commit, rollbacks are one revert. Also rebuilt the Prometheus alerting so on-call gets real symptoms, not noise.</p>
         <div class="stack"><span class="chip">ArgoCD</span><span class="chip">Helm</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
       </div>
     </div>
@@ -224,9 +221,8 @@
     <h2 class="title">About.</h2>
     <div class="about-grid">
       <div class="about">
-        <p>I'm a <strong>Platform Engineer with 5 years</strong> building scalable AWS and Kubernetes infrastructure. Right now that's at <strong>Sprout Social</strong>, where I own and operate the production EKS platform that 8–10 engineering teams run 100+ workloads on — partnering closely with developers to turn deployment and troubleshooting pain into reliable self-service workflows.</p>
-        <p>Before Sprout I spent three years at <strong>AppsFlyer</strong> as a DevOps Engineer, building GitHub Actions CI/CD, provisioning AWS with Terraform, and standing up centralized EFK logging that gave the team structured runbooks and faster incident triage. That's where I learned observability and incident response properly.</p>
-        <p>The last stretch has changed how I work. I run <strong>Claude Code as an agent</strong> in my repos daily — with custom skills and CLAUDE.md/AGENTS.md context engineering — and I wire <strong>MCP servers split by blast radius</strong>: read-only for triage, mutating changes gated behind plan review and approval. The interesting problem now isn't whether AI can do infra work; it's building the guardrails so it does it safely. That's a platform problem — and platform problems are what I like.</p>
+        <p>I'm a Platform Engineer with about 5 years of experience, focused on Kubernetes, AWS, and Terraform. At Sprout Social I run production EKS infrastructure — GitOps deployments, observability, and the security around them — and most of my time goes to the practical work of keeping deploys smooth and incidents short, and making the platform easier for developers to use.</p>
+        <p>Lately I've been building AI-assisted workflows for Kubernetes operations: a Claude Code skill that collects pod health, events, and logs to help investigate incidents and spot likely causes. It's early, but promising. I hold the CKA and CKAD certifications.</p>
       </div>
       <aside class="quick">
         <h3>// quick_facts</h3>
@@ -308,7 +304,7 @@
     <h2 class="title">Open to platform &amp; infrastructure roles.</h2>
     <div class="contact-grid">
       <div class="contact">
-        <p class="lead">Particularly teams in fintech and infrastructure — or anyone taking AI adoption in engineering seriously enough to build guardrails for it. Chicago or remote.</p>
+        <p class="lead">Open to Platform / DevOps roles. Chicago or remote.</p>
         <div class="direct">
           <a href="mailto:tatina.btech@gmail.com"><span>›</span> tatina.btech@gmail.com</a>
           <a href="https://www.linkedin.com/in/tatinabak/" target="_blank" rel="noopener"><span>›</span> linkedin.com/in/tatinabak</a>
