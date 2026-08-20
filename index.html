@@ -162,33 +162,18 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <div class="kicker mono">Platform Engineer — <b>Chicago, IL</b></div>
-      <h1>I build the platform other engineers <span class="hl">ship on.</span></h1>
-      <p class="lead">I own and operate the production EKS platform at Sprout Social — Terraform, GitOps, and observability — and I work AI-first, with the guardrails to do it safely against production.</p>
-      <div class="cta-row">
-        <a href="mailto:tatina.btech@gmail.com" class="btn primary">Email me</a>
-        <a href="https://www.linkedin.com/in/tatinabak/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
-        <a href="#work" class="btn ghost">Selected work</a>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="tatina.jpg" alt="Tatina Bakishova" width="760" height="947">
-      <span class="photo-tag mono">tatina@platform</span>
+  <div class="wrap">
+    <div class="kicker mono">Platform Engineer — <b>Chicago, IL</b></div>
+    <h1>I keep the Kubernetes platform <span class="hl">running</span> so other teams can ship.</h1>
+    <p class="lead">I run the production EKS platform at Sprout Social — Terraform, ArgoCD, and Prometheus — and I write practical AI-assisted tooling to help engineers debug Kubernetes faster.</p>
+    <div class="cta-row">
+      <a href="mailto:tatina.btech@gmail.com" class="btn primary">Email me</a>
+      <a href="https://www.linkedin.com/in/tatinabak/" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
+      <a href="#work" class="btn ghost">Selected work</a>
     </div>
   </div>
 </div>
 
-<!-- STAT BAND -->
-<div class="stats">
-  <div class="wrap stats-inner">
-    <div class="stat"><div class="n">8–10</div><div class="l">engineering teams served</div></div>
-    <div class="stat"><div class="n">100+</div><div class="l">workloads on the platform</div></div>
-    <div class="stat"><div class="n">~4×</div><div class="l">faster incident triage</div></div>
-    <div class="stat"><div class="n">&lt;5 min</div><div class="l">GitOps rollback</div></div>
-  </div>
-</div>
 
 <!-- SELECTED WORK -->
 <section id="work">
@@ -243,9 +228,7 @@
         <p>Before Sprout I spent three years at <strong>AppsFlyer</strong> as a DevOps Engineer, building GitHub Actions CI/CD, provisioning AWS with Terraform, and standing up centralized EFK logging that gave the team structured runbooks and faster incident triage. That's where I learned observability and incident response properly.</p>
         <p>The last stretch has changed how I work. I run <strong>Claude Code as an agent</strong> in my repos daily — with custom skills and CLAUDE.md/AGENTS.md context engineering — and I wire <strong>MCP servers split by blast radius</strong>: read-only for triage, mutating changes gated behind plan review and approval. The interesting problem now isn't whether AI can do infra work; it's building the guardrails so it does it safely. That's a platform problem — and platform problems are what I like.</p>
       </div>
-      <aside>
-        <img src="tatina.jpg" alt="Tatina Bakishova" class="about-photo">
-        <div class="quick">
+      <aside class="quick">
         <h3>// quick_facts</h3>
         <ul>
           <li><span>role</span><span>Platform Engineer</span></li>
@@ -256,7 +239,6 @@
           <li><span>certs</span><span>CKA · CKAD · AWS · TF</span></li>
           <li><span>focus</span><span>Fintech &amp; infra</span></li>
         </ul>
-        </div>
       </aside>
     </div>
   </div>
@@ -272,11 +254,11 @@
       <div class="job-head"><h3>Platform Engineer · <span class="co">Sprout Social</span></h3><div class="job-when mono">Jul 2024 — Present</div></div>
       <div class="job-loc mono">Chicago, IL</div>
       <ul>
-        <li>Owns and operates the production <b>Amazon EKS platform</b> (Terraform) supporting 8–10 engineering teams and 100+ workloads.</li>
-        <li>Moved delivery to <b>GitOps with ArgoCD</b>, cutting rollbacks from 15–20 min to under 5.</li>
-        <li>Cut false-positive alerts significantly by redesigning <b>Prometheus/Alertmanager</b> rules with SLO-based alerting.</li>
-        <li>Built an <b>AI-assisted Kubernetes diagnostic workflow</b> over pod health, events, and logs to accelerate root-cause analysis.</li>
-        <li>Contained blast radius by binding workloads to dedicated <b>IRSA roles</b> with least-privilege access.</li>
+        <li>Managed a production <b>Amazon EKS</b> platform with Terraform (VPC, node groups, IAM, add-ons) running 100+ workloads for multiple engineering teams.</li>
+        <li>Migrated deployments from manual <b>helm install</b> to <b>GitOps with ArgoCD</b>, making Git the source of truth and rollbacks a single revert.</li>
+        <li>Redesigned <b>Prometheus alerting</b>, cutting 25+ noisy alerts to a focused set tied to real symptoms instead of single events.</li>
+        <li>Wrote a <b>Claude Code diagnostic skill</b> that pulls pod status, events, and logs for a failing workload and returns likely root causes to the on-call engineer.</li>
+        <li>Assigned each workload a dedicated IAM role via <b>IRSA</b>, so a compromised pod can't assume another's AWS access.</li>
       </ul>
     </div>
 
@@ -284,11 +266,11 @@
       <div class="job-head"><h3>DevOps Engineer · <span class="co">AppsFlyer</span></h3><div class="job-when mono">May 2021 — Jun 2024</div></div>
       <div class="job-loc mono">San Francisco, CA</div>
       <ul>
-        <li>Provisioned multi-environment <b>AWS</b> (VPC, EKS, RDS, S3) with <b>Terraform</b> modules and remote state locking.</li>
-        <li>Built <b>GitHub Actions CI/CD</b> with automated testing, cutting release cycles from 30 min to under 10.</li>
-        <li>Deployed centralized <b>EFK logging</b> across services, enabling structured on-call runbooks and faster triage.</li>
-        <li>Standardized services with reusable <b>Docker</b> images and <b>Helm</b> charts across dev, staging, and prod.</li>
-        <li>Enforced <b>Kubernetes RBAC</b> for scoped, role-based access across shared clusters.</li>
+        <li>Provisioned AWS across dev, staging, and prod with reusable <b>Terraform</b> modules and remote state locking (S3 + DynamoDB).</li>
+        <li>Automated <b>CI/CD in GitHub Actions</b> with test gates for 20+ services, replacing manual release steps.</li>
+        <li>Deployed the <b>EFK stack</b> to centralize container logs — one place to search instead of per-pod digging.</li>
+        <li>Packaged services as <b>Docker</b> images and <b>Helm</b> charts so the same artifact promotes through each environment.</li>
+        <li>Configured <b>Kubernetes RBAC</b> so each team got only the cluster access it needed.</li>
       </ul>
     </div>
   </div>
@@ -301,11 +283,11 @@
     <h2 class="title">Skills.</h2>
     <p style="color:var(--muted);margin:0 0 24px">Tools I've run in production and can talk through end to end.</p>
     <div class="skills-grid">
-      <div class="skill-card"><h3>// cloud &amp; infra</h3><div class="chips"><span class="chip">AWS</span><span class="chip">EKS</span><span class="chip">EC2</span><span class="chip">VPC</span><span class="chip">IAM</span><span class="chip">S3</span><span class="chip">RDS</span><span class="chip">Lambda</span><span class="chip">Linux</span></div></div>
+      <div class="skill-card"><h3>// cloud &amp; infra</h3><div class="chips"><span class="chip">AWS</span><span class="chip">EKS</span><span class="chip">EC2</span><span class="chip">VPC</span><span class="chip">IAM</span><span class="chip">S3</span><span class="chip">RDS</span><span class="chip">DynamoDB</span><span class="chip">Lambda</span><span class="chip">Karpenter</span><span class="chip">CNI</span><span class="chip">Rancher</span><span class="chip">Linux</span></div></div>
       <div class="skill-card"><h3>// containers</h3><div class="chips"><span class="chip">Kubernetes</span><span class="chip">Docker</span><span class="chip">Helm</span></div></div>
-      <div class="skill-card"><h3>// iac &amp; gitops</h3><div class="chips"><span class="chip">Terraform</span><span class="chip">GitHub Actions</span><span class="chip">ArgoCD</span><span class="chip">GitOps</span><span class="chip">Reloader</span></div></div>
+      <div class="skill-card"><h3>// iac &amp; gitops</h3><div class="chips"><span class="chip">Terraform</span><span class="chip">GitHub Actions</span><span class="chip">ArgoCD</span><span class="chip">Flux</span><span class="chip">Helm</span><span class="chip">Reloader</span></div></div>
       <div class="skill-card"><h3>// observability</h3><div class="chips"><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">VictoriaMetrics</span><span class="chip">Datadog</span><span class="chip">EFK Stack</span><span class="chip">CloudWatch</span></div></div>
-      <div class="skill-card"><h3>// security &amp; networking</h3><div class="chips"><span class="chip">IRSA</span><span class="chip">Kubernetes RBAC</span><span class="chip">cert-manager</span><span class="chip">Gateway API</span><span class="chip">NGINX Ingress</span></div></div>
+      <div class="skill-card"><h3>// security &amp; networking</h3><div class="chips"><span class="chip">IRSA</span><span class="chip">Kubernetes RBAC</span><span class="chip">OIDC</span><span class="chip">Kyverno</span><span class="chip">cert-manager</span><span class="chip">Istio</span><span class="chip">Gateway API</span><span class="chip">NGINX Ingress</span><span class="chip">Velero</span></div></div>
       <div class="skill-card ai"><h3>// ai / agentic</h3><div class="chips"><span class="chip">Claude Code</span><span class="chip">MCP Servers</span><span class="chip">Agentic Workflows</span><span class="chip">Context Engineering</span></div></div>
       <div class="skill-card"><h3>// scripting</h3><div class="chips"><span class="chip">Bash</span><span class="chip">Python</span></div></div>
     </div>
